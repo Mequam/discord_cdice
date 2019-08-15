@@ -1,0 +1,17 @@
+Hi! I'm cdice, the dice rolling discord bot!
+
+I can [Roll] an any-sided dice any number of times and add them all up using "cdice [Number of Dice]d[Number of Sides]".
+For example: "cdice 3d6" will mean I roll a 6-sided dice 3 times and add them all up.
+
+I can also [Roll] any number of times using "x[Number of Times] [Roll]"
+For example: "cdice x10 3d6" will mean that I roll a 3d6 10 times and tell you each individual [Roll]
+
+On top of that, I can seperate each individual [Roll] with any character you want using "x[Number of Times]B[Character] [Roll]"
+For example: "cdice x10B\_ 3d6" will mean that I roll a 3d6 10 times and seperate each [Roll] with a "\_"
+I don't even need a [Character], if you use "x[Number of Times]B [Roll]" I'll put each [Roll] on a new line.
+
+I'm also able to mix and match all of these in cool ways.
+Such as: "cdice x3B x4B\_ 3d6" will mean that I roll a 3d6 4 times and sperate each [Roll] with "\_", and all of that again 2 more times on a different line each.
+
+That's it for now.  If you want some more help, you can do "cdice help 2"
+I hope you enjoy!
