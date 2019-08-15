@@ -5,7 +5,11 @@ import validate
 from math import floor
 from math import ceil
 #print(discord.__version__)  # check to make sure at least once you're on the right version!
-
+def get_token(env='token'):
+	#this code is inside of a function so if we want to change the way that the bot interfaces with discord
+	#we can easily access the token
+	import os
+	return os.environ[env]
 #this function parses a single rolling sequence of [-expr[D] [-expr[D]...]] <expr>
 def strip(string):
     while string[-1] == '0' or string[-1] == '.':
@@ -47,9 +51,8 @@ def eval_roll(args):
     return buff[0]
 
 #initilise all of the variables found inside of text files
-f = open('token.txt','r')
-token = f.readline()[0:-1]
-f.close()
+token = get_token()
+
 f = open('help/help1.txt','r')
 data = f.readline()
 help1 = data
@@ -57,6 +60,7 @@ while data:
     data = f.readline()
     help1+=data
 f.close()
+
 f = open('help/help2.txt')
 data = ''
 data = f.readline()
@@ -65,6 +69,7 @@ while data:
     data = f.readline()
     help2 += data
 f.close()
+
 #this is the code that we use to interface with discord
 client = discord.Client()  # starts the discord client.
 stop = False #global variable
