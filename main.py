@@ -83,10 +83,10 @@ async def on_message(message):  # event that happens per any message
     #store the split message content into args becuse im lazy and prefer to type args
     args = message.content.split(' ')
     #if the first argument is cdice they want to run the cdice program
-    if args[0] == 'cdice':
+    if args[0].lower() == 'cdice':
         if len(args) > 1:
             #we have arguments
-            if args[1] == 'help':
+            if args[1].lower() == 'help':
                 page = 1
                 if len(args) > 2:
                     page = validate.safe_int(args[2])
